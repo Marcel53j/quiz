@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .question {
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<p>Saint Patrick's Day is a special time when people celebrate Irish culture with parades, gatherings, and lots of green. Nowadays, technology can make these celebrations even more exciting. Let's explore some ways businesses and individuals can use technology to make Saint Patrick's Day more fun and innovative.
+
+Virtual Parties:
+Instead of just celebrating locally, you can now have virtual parties online. This means people from all over the world can join in. You could organize things like online parties, pub quizzes, or live music performances by Irish artists.
+
+Social Media Fun:
+Encourage everyone to get involved in Saint Patrick's Day on social media. You could ask people to share pictures of themselves wearing green, or of Irish-inspired food and decorations. Using hashtags can help bring everyone together online.
+
+Online Shopping Deals:
+Businesses can get into the Saint Patrick's Day spirit by offering special deals online. They could sell green-themed products or give discounts on Irish-related items. This makes it easy for people to get festive things without leaving home.
+
+Virtual Tours:
+Take people on a virtual tour of Ireland using technology like Google Earth or VR. They can explore famous landmarks and beautiful scenery right from their computers or phones.
+
+Cooking Classes:
+Host virtual cooking classes where people can learn to make traditional Irish dishes. A chef or cooking enthusiast could teach everyone how to make things like Irish stew or soda bread over a video call.
+
+Fun Filters:
+Create special Saint Patrick's Day filters for social media. These could be things like shamrock crowns or leprechaun hats that people can add to their photos and videos.
+
+Irish Dance:
+Arrange virtual Irish dance performances or tutorials. Professional dancers can lead live-streamed sessions, teaching traditional Irish dances or showing off their moves.
+
+In conclusion, technology offers lots of exciting ways to celebrate Saint Patrick's Day. Whether it's through virtual parties, social media fun, online shopping, virtual tours, cooking classes, fun filters, or Irish dance, there are plenty of ways to enjoy the holiday even if you can't be together in person. Cheers to a tech-filled Saint Patrick's Day!</p>
+<div class="quiz-container">
+    <div class="question">1. What opportunities does technology offer for Saint Patrick's Day according to the text?</div>
+    <input type="radio" name="q1" value="A"> Virtual gatherings, cooking classes, and unique filters on social media.<br>
+    <input type="radio" name="q1" value="B"> Only traditional in-person events.<br>
+    <input type="radio" name="q1" value="C"> Traditional commerce without using the internet.<br>
+    <input type="radio" name="q1" value="D"> Only the possibility of watching traditional parades online.<br>
+</div>
+
+<button onclick="checkAnswer('q1')">Check Answer</button>
+
+<div id="answer1"></div>
+<div id="excerpt1"></div>
+
+<div class="quiz-container">
+    <div class="question">2. What can businesses do to join in the celebration of Saint Patrick's Day according to the text?</div>
+    <input type="radio" name="q2" value="A"> Offer only traditional products.<br>
+    <input type="radio" name="q2" value="B"> Only organize virtual concerts by Irish musicians.<br>
+    <input type="radio" name="q2" value="C"> Provide promotions related to the holiday theme in e-commerce.<br>
+    <input type="radio" name="q2" value="D"> Offer free trips to Ireland.<br>
+</div>
+
+<button onclick="checkAnswer('q2')">Check Answer</button>
+
+<div id="answer2"></div>
+<div id="excerpt2"></div>
+
+<div class="quiz-container">
+    <div class="question">3. What events can be organized online according to the text?</div>
+    <input type="radio" name="q3" value="A"> Only business meetings.<br>
+    <input type="radio" name="q3" value="B"> Only dance workshops.<br>
+    <input type="radio" name="q3" value="C"> Online meetings, quizzes, or concerts by Irish musicians.<br>
+    <input type="radio" name="q3" value="D"> Only product presentations.<br>
+</div>
+
+<button onclick="checkAnswer('q3')">Check Answer</button>
+
+<div id="answer3"></div>
+<div id="excerpt3"></div>
+
+<div class="quiz-container">
+    <div class="question">4. What is one of the recommended tools for organizing virtual tours of Ireland according to the text?</div>
+    <input type="radio" name="q4" value="A"> Facebook.<br>
+    <input type="radio" name="q4" value="B"> Instagram.<br>
+    <input type="radio" name="q4" value="C"> Google Earth.<br>
+    <input type="radio" name="q4" value="D"> Twitter.<br>
+</div>
+
+<button onclick="checkAnswer('q4')">Check Answer</button>
+
+<div id="answer4"></div>
+<div id="excerpt4"></div>
+
+<div class="quiz-container">
+    <div class="question">5. What content can be shared on social media according to the text?</div>
+    <input type="radio" name="q5" value="A"> Only posts about everyday events.<br>
+    <input type="radio" name="q5" value="B"> Only content unrelated to the holiday theme.<br>
+    <input type="radio" name="q5" value="C"> Pictures in green attire, virtual backgrounds, or Irish cuisine recipes.<br>
+    <input type="radio" name="q5" value="D"> Only product advertisements.<br>
+</div>
+
+<button onclick="checkAnswer('q5')">Check Answer</button>
+
+<div id="answer5"></div>
+<div id="excerpt5"></div>
+
+<script>
+function checkAnswer(question) {
+    let score = 0;
+    const correctAnswers = {
+        "q1": "A",
+        "q2": "C",
+        "q3": "C",
+        "q4": "C",
+        "q5": "C"
+    };
+    const userAnswer = document.querySelector('input[name="' + question + '"]:checked').value;
+    let answerText = "";
+    let excerptText = "";
+
+    if (userAnswer === correctAnswers[question]) {
+        score++;
+    }
+
+    switch(question) {
+        case "q1":
+            answerText = "Virtual gatherings, cooking classes, and unique filters on social media.";
+            excerptText = "As Saint Patrick's Day approaches, the fusion of tradition and technology opens up exciting possibilities for businesses and individuals alike. By leveraging virtual gatherings, social media campaigns, e-commerce promotions, virtual tours, cooking classes, AR filters, and dance performances the celebration can extend beyond physical boundaries.";
+            break;
+        case "q2":
+            answerText = "Provide promotions related to the holiday theme in e-commerce.";
+            excerptText = "Businesses can tap into the Saint Patrick's Day fervor by offering themed e-commerce promotions. From green-themed products to exclusive discounts, leveraging technology for online shopping experiences enhances the convenience and accessibility of festive offerings.";
+            break;
+        case "q3":
+            answerText = "Online meetings, quizzes, or concerts by Irish musicians.";
+            excerptText = "Host virtual festivities, such as online parties, virtual pub quizzes, or live-streamed performances by Irish musicians.";
+            break;
+        case "q4":
+            answerText = "Google Earth.";
+            excerptText = "Bring a taste of Ireland to your audience through virtual tours. Utilize platforms like Google Earth or VR (Virtual Reality) experiences to take viewers on a digital journey through iconic Irish landmarks, picturesque landscapes, and historic sites.";
+            break;
+        case "q5":
+            answerText = "Pictures in green attire, virtual backgrounds, or Irish cuisine recipes.";
+            excerptText = "Encourage employees, customers, or followers to participate in green-themed social media campaigns. Whether it's sharing photos of festive attire, virtual backgrounds, or Irish-inspired recipes...";
+            break;
+    }
+
+    document.getElementById("answer" + question.slice(-1)).innerHTML = "Answer: " + answerText;
+    document.getElementById("excerpt" + question.slice(-1)).innerHTML = "Text excerpt: " + excerptText;
+    alert("Your score for question " + question.slice(-1) + ": " + score);
+}
+</script>
+<a href="https://www.linkedin.com/pulse/shamrocks-pixels-embracing-technology-st-pattys-day-amber-koenigs-h7edc" target="_blank">Original text</a>
+</body>
+</html>
